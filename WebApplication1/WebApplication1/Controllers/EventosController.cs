@@ -12,7 +12,7 @@ namespace WebApplication1.Controllers
 {
     public class EventosController : Controller
     {
-        private TareasEntities db = new TareasEntities();
+        private TareasEntities1 db = new TareasEntities1();
 
         // GET: Eventos
         public ActionResult Index()

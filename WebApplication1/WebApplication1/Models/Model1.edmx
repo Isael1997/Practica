@@ -10,17 +10,17 @@
             <PropertyRef Name="id" />
           </Key>
           <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="nombre" Type="varchar" MaxLength="1" />
-          <Property Name="celular" Type="numeric" Precision="18" Scale="0" />
-          <Property Name="email" Type="varchar" MaxLength="1" />
-          <Property Name="direccion" Type="varchar" MaxLength="1" />
+          <Property Name="nombre" Type="varchar" MaxLength="50" />
+          <Property Name="celular" Type="bigint" />
+          <Property Name="email" Type="text" />
+          <Property Name="direccion" Type="text" />
         </EntityType>
         <EntityType Name="eventos">
           <Key>
             <PropertyRef Name="id" />
           </Key>
           <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="evento" Type="varchar" MaxLength="1" />
+          <Property Name="evento" Type="text" />
           <Property Name="fecha" Type="date" />
           <Property Name="hora" Type="time" Precision="7" />
         </EntityType>
@@ -38,21 +38,21 @@
             <PropertyRef Name="id" />
           </Key>
           <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="nombre" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
-          <Property Name="celular" Type="Decimal" Precision="18" Scale="0" />
-          <Property Name="email" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
-          <Property Name="direccion" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="celular" Type="Int64" />
+          <Property Name="email" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="direccion" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="eventos">
           <Key>
             <PropertyRef Name="id" />
           </Key>
           <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="evento" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="evento" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
           <Property Name="fecha" Type="DateTime" Precision="0" />
           <Property Name="hora" Type="Time" Precision="7" />
         </EntityType>
-        <EntityContainer Name="TareasEntities" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="TareasEntities1" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="agenda" EntityType="Self.agenda" />
           <EntitySet Name="eventos" EntityType="Self.eventos" />
         </EntityContainer>
@@ -61,7 +61,7 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="TareasModelStoreContainer" CdmEntityContainer="TareasEntities">
+        <EntityContainerMapping StorageEntityContainer="TareasModelStoreContainer" CdmEntityContainer="TareasEntities1">
           <EntitySetMapping Name="agenda">
             <EntityTypeMapping TypeName="TareasModel.agenda">
               <MappingFragment StoreEntitySet="agenda">
