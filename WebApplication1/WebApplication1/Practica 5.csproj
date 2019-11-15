@@ -218,6 +218,9 @@
     <Content Include="Views\Eventos\Details.cshtml" />
     <Content Include="Views\Eventos\Edit.cshtml" />
     <Content Include="Views\Eventos\Index.cshtml" />
+    <Content Include="Views\Home\Consultas.cshtml" />
+    <Content Include="Views\Home\Lector.cshtml" />
+    <Content Include="Views\Home\Acercade.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -14,7 +14,7 @@ namespace WebApplication1.Controllers
             return View();
         }
 
-        public ActionResult Contactos()
+        public ActionResult Consultas()
         {
             return View();
         }
